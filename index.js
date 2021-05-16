@@ -1,19 +1,47 @@
 $(document).ready(function slotMachineImplementation() {
-    const bar = 'src/BAR.png';
-    const barDoubled = 'src/2xBAR.png';
-    const barTripled = 'src/3xBAR.png';
-    const cherry = 'src/Cherry.png';
-    const seven = 'src/7.png';
+    const bar = 'src/BAR.png'; // 0
+    const barDoubled = 'src/2xBAR.png'; // 1
+    const barTripled = 'src/3xBAR.png'; // 2
+    const cherry = 'src/Cherry.png'; // 3
+    const seven = 'src/7.png'; // 4
 
     const arr = [bar, barDoubled, barTripled, cherry, seven];
     var resultArr = [
         [0, 0, 0],
         [0, 0, 0],
-        [0, 0, 0]
-      ];
+        [0, 0, 0],
+    ];
+    // var resultArr;
+    var result = 0;
+
+    function isPayouts() {
+        console.log('RESULT: ', resultArr);
+        console.log(resultArr.length);
+
+        // resultArr.forEach(function(item, index, array) {
+        //     console.log(item, index)
+        // })
+
+        for(let i = 0; i < resultArr.length; i++) {
+            console.log('ROW #: ', i);
+            var row = resultArr[i];
+            console.log(row);
+            for(let j = 0; j < row.length; j++) {
+                
+                console.log("row[" + i + "][" + j + "] = " + row[j]);
+            }
+        }
+        result = 15;
+        document.getElementById('points').innerHTML = result;
+    }
 
     function spinEachTableCell(currentSlot, interval, reel, reelIteration) {
         var counter = 0;
+        // resultArr = [
+        //     [1, 0, 0],
+        //     [0, 0, 0],
+        //     [0, 0, 0],
+        // ];
 
         var setIntervalId = setInterval(function runSlot(){
             counter++;
@@ -25,15 +53,14 @@ $(document).ready(function slotMachineImplementation() {
                 resultArr[reel][reelIteration] = randImgIndex;
                 $(currentSlot).removeClass("blur");
                 $(currentSlot).removeClass("top");
-                return;
+                return ;
             }
         }, 5);
     }
 
-    $("#twist").on("click", function startSlotMachine() {
+    $("#twist").on("click", async function startSlotMachine() {
         $("img").addClass("blur");
         $("img").addClass("top");
-        document.getElementById('points').innerHTML = 'something';
 
         var table = document.getElementById('slotsCollection');
         var numberOfRows = table.rows.length;
@@ -46,6 +73,6 @@ $(document).ready(function slotMachineImplementation() {
                 spinEachTableCell($(currentCell), 140 * (j + 1), i, j);
             }
         }
-        console.log('RESULT: ', resultArr);
+        await isPayouts();
     });
 });
