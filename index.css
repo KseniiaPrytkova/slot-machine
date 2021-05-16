@@ -9,10 +9,11 @@
 
 #points {
     margin: auto;
-    width: 5%;
+    width: 10%;
     border: 1px solid black;
     padding: 10px;
-    text-align:center;
+    /* display: inline-block; */
+    /* text-align:center; */
 }
 
 button {
