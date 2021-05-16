@@ -12,12 +12,14 @@
         [0, 0, 0],
     ];
     // var resultArr;
-    var result = 0;
+    //var result = 0;
 
     function isPayouts() {
         resultArr = resultArr;
         console.log('RESULT: ', resultArr);
         console.log(resultArr.length);
+
+        var result = 0;
 
         // resultArr.forEach(function(item, index, array) {
         //     console.log(item, index)
@@ -28,11 +30,10 @@
             var row = resultArr[i];
             console.log(row);
             for(let j = 0; j < row.length; j++) {
-                
+                result += row[j];
                 console.log("row[" + i + "][" + j + "] = " + row[j]);
             }
         }
-        result = 15;
         return(result);
     }
 
@@ -60,7 +61,9 @@
         return setIntervalId;
     }
 
-    function startSlotMachine() {
+    function startSlotMachine2() {
+        var r = $.Deferred();
+
         $("img").addClass("blur");
         $("img").addClass("top");
 
@@ -75,7 +78,19 @@
                 spinEachTableCell($(currentCell), 140 * (j + 1), i, j);
             }
         }
+
+        setTimeout(function () {
+            r.resolve();
+        }, 2500);
+        return r;
+    }
+
+    function startSlotMachine3() {
         var result = isPayouts();
         document.getElementById('points').innerHTML = result;
+    }
+
+    function startSlotMachine() {
+        startSlotMachine2().done(startSlotMachine3);
     }
 // });
