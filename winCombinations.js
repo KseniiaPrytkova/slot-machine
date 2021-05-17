@@ -125,4 +125,40 @@ let data = [
         "sequence":[ 1, 2, 0 ],
         "points": 5
     },
+    {
+        "name": '9.7',
+        "line": 'any',
+        "sequence":[ 0, 1, 0 ],
+        "points": 5
+    },
+    {
+        "name": '9.8',
+        "line": 'any',
+        "sequence":[ 0, 2, 0 ],
+        "points": 5
+    },
+    {
+        "name": '9.9',
+        "line": 'any',
+        "sequence":[ 1, 0, 1 ],
+        "points": 5
+    },
+    {
+        "name": '9.10',
+        "line": 'any',
+        "sequence":[ 1, 2, 1 ],
+        "points": 5
+    },
+    {
+        "name": '9.11',
+        "line": 'any',
+        "sequence":[ 2, 0, 2 ],
+        "points": 5
+    },
+    {
+        "name": '9.12',
+        "line": 'any',
+        "sequence":[ 2, 1, 2 ],
+        "points": 5
+    },
 ];

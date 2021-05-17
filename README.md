@@ -1,7 +1,7 @@
 # slot_machine
 
 TODO:
-- add more winning combinations; [DONE] can be optimised
+- add more winning combinations; [**DONE** - can be optimised]
 - change div on text fild;
 - ask user for initial amount of money, display that in text field;
 - deal with out of money (just negative values for now); 
