@@ -50,7 +50,7 @@ let data = [
         "points": 10
     },
     // Any combination of CHERRY and 7 on any line
-    // can be done nicer (combinatorics - combination generator; maybe can be fn; representation)
+    // can be done nicer (COMBINATORICS - combination generator; maybe can be fn; representation)
     {
         "name": '8.1',
         "line": 'any',
@@ -88,7 +88,7 @@ let data = [
         "points": 75
     },
     // Combination of any BAR symbols on any line
-    // can be done nicer
+    // can be done nicer (COMBINATORICS - combination generator; maybe can be fn; representation)
     {
         "name": '9.1',
         "line": 'any',
@@ -159,6 +159,30 @@ let data = [
         "name": '9.12',
         "line": 'any',
         "sequence":[ 2, 1, 2 ],
+        "points": 5
+    },
+    {
+        "name": '9.13',
+        "line": 'any',
+        "sequence":[ 2, 3, 3 ],
+        "points": 5
+    },
+    {
+        "name": '9.14',
+        "line": 'any',
+        "sequence":[ 3, 2, 2 ],
+        "points": 5
+    },
+    {
+        "name": '9.15',
+        "line": 'any',
+        "sequence":[ 3, 2, 3 ],
+        "points": 5
+    },
+    {
+        "name": '9.16',
+        "line": 'any',
+        "sequence":[ 2, 3, 2 ],
         "points": 5
     },
 ];
