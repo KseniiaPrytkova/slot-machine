@@ -6,8 +6,8 @@
 
     // points
     let result = 1;
-    // current winning row
-    let winRow = 0;
+    // current winning row/rows
+    let winRow = ['-1', '-1', '-1'];
 
     const arr = [bar, barDoubled, barTripled, cherry, seven];
     let resultArr = [
@@ -29,8 +29,8 @@
                 if (equals(row, dataItem.sequence)) {
                     if (dataItem.line == 'any' || dataItem.line == i) {
                         result += dataItem.points;
-                        winRow = i.toString();
-                        document.getElementById(winRow).style.background = "red";
+                        winRow[i] = i.toString();
+                        document.getElementById(winRow[i]).style.background = "red";
                     }
                 }
             });
@@ -90,6 +90,10 @@
     // initial function. Waits untill animation is finished to start calculate payouts.
     function startSlotMachine() {
         result -= 1;
-        document.getElementById(winRow).style.background = "white";
+        for (let i = 0; i < winRow.length; i++) {
+            if (winRow[i] !== '-1') {
+                document.getElementById(winRow[i]).style.background = "white";
+            }
+        }
         spinSlotMachine().done(calculatePayout);
     }

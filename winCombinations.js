@@ -89,6 +89,7 @@ let data = [
     },
     // Combination of any BAR symbols on any line
     // can be done nicer (COMBINATORICS - combination generator; maybe can be fn; representation)
+    // 27 - 3 = 24 combinations
     {
         "name": '9.1',
         "line": 'any',
@@ -185,10 +186,52 @@ let data = [
         "sequence":[ 1, 1, 2 ],
         "points": 5
     },
-    // {
-    //     "name": '9.17',
-    //     "line": 'any',
-    //     "sequence":[ 2, 3, 3 ],
-    //     "points": 5
-    // },
+    {
+        "name": '9.17',
+        "line": 'any',
+        "sequence":[ 2, 0, 0 ],
+        "points": 5
+    },
+    {
+        "name": '9.18',
+        "line": 'any',
+        "sequence":[ 0, 0, 1 ],
+        "points": 5
+    },
+    {
+        "name": '9.19',
+        "line": 'any',
+        "sequence":[ 1, 0, 0 ],
+        "points": 5
+    },
+    {
+        "name": '9.20',
+        "line": 'any',
+        "sequence":[ 0, 1, 1 ],
+        "points": 5
+    },
+    {
+        "name": '9.21',
+        "line": 'any',
+        "sequence":[ 1, 1, 0 ],
+        "points": 5
+    },
+    {
+        "name": '9.22',
+        "line": 'any',
+        "sequence":[ 0, 0, 2 ],
+        "points": 5
+    },
+    {
+        "name": '9.23',
+        "line": 'any',
+        "sequence":[ 0, 2, 2 ],
+        "points": 5
+    },
+    {
+        "name": '9.24',
+        "line": 'any',
+        "sequence":[ 2, 2, 0 ],
+        "points": 5
+    },
 ];
