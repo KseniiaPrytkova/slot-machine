@@ -16,7 +16,6 @@
         [0, 0, 0],
     ];
 
-
     // fn to check arrays equality
     const equals = (a, b) =>
         a.length === b.length &&
@@ -88,7 +87,7 @@
         document.getElementById('points').innerHTML = result;
     }
 
-    // Initial function. Waits untill animation is finished to start calculate payouts.
+    // initial function. Waits untill animation is finished to start calculate payouts.
     function startSlotMachine() {
         result -= 1;
         document.getElementById(winRow).style.background = "white";
