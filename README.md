@@ -10,7 +10,7 @@ TODO:
 - style the table itself;
 - add debug area;
 - add corresponding logic for debug area;
-- if more then 1 row won (bug for now);
+- if more then 1 row won, then onlu 1 is highligted (bug for now);
 - remove unnecessary classes/ids;
 - fix time logic (spinning must last 2 seconds, after that reels start to sop one by one (starting from left) having 0.5 sec delay between landings);
 - test logic, find bugs.
