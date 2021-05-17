@@ -84,18 +84,17 @@
 
     function calculatePayout() {
         let result = isPayouts();
-        document.getElementById('points').innerHTML = result;
+        document.getElementById("points").value = result;
     }
 
     // initial function. Waits untill animation is finished to start calculate payouts.
     function startSlotMachine() {
-        result -= 1;
-        let ddd = document.getElementById("points").value;
-        console.log('---->', ddd);
+        result = document.getElementById("points").value;
 
-        if (!isEnoughMoney(ddd))
+        if (!isEnoughMoney(result))
             return;
 
+        result -= 1;
         for (let i = 0; i < winRow.length; i++) {
             if (winRow[i] !== '-1') {
                 document.getElementById(winRow[i]).style.background = "white";

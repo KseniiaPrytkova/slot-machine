@@ -25,6 +25,7 @@ input[type=text] {
     border: none;
     border-bottom: 2px solid red;
     text-align:center;
+    outline: none;
 }
 
 button {
@@ -36,6 +37,7 @@ button {
     cursor: pointer;
     border-color: #f44336;
     color: red;
+    outline: none;
 }
 
 button:hover {
