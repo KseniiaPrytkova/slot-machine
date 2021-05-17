@@ -88,7 +88,8 @@ let data = [
         "points": 75
     },
     // Combination of any BAR symbols on any line
-    // can be done nicer (COMBINATORICS - combination generator; maybe can be fn; representation)
+    // can be done nicer (COMBINATORICS - combination generator; maybe can be separate fn; representation);
+    // can be solved: check unique combinations in this file, for massive combinations create a separate fn;
     // 27 - 3 = 24 combinations
     {
         "name": '9.1',
