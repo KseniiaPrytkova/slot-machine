@@ -49,4 +49,80 @@ let data = [
         "sequence":[ 0, 0, 0 ],
         "points": 10
     },
+    // Any combination of CHERRY and 7 on any line
+    // can be done nicer (combinatorics - combination generator; maybe can be fn; representation)
+    {
+        "name": '8.1',
+        "line": 'any',
+        "sequence":[ 3, 3, 4 ],
+        "points": 75
+    },
+    {
+        "name": '8.2',
+        "line": 'any',
+        "sequence":[ 3, 4, 3 ],
+        "points": 75
+    },
+    {
+        "name": '8.3',
+        "line": 'any',
+        "sequence":[ 4, 3, 3 ],
+        "points": 75
+    },
+    {
+        "name": '8.4',
+        "line": 'any',
+        "sequence":[ 4, 4, 3 ],
+        "points": 75
+    },
+    {
+        "name": '8.5',
+        "line": 'any',
+        "sequence":[ 4, 3, 4 ],
+        "points": 75
+    },
+    {
+        "name": '8.6',
+        "line": 'any',
+        "sequence":[ 3, 4, 4 ],
+        "points": 75
+    },
+    // Combination of any BAR symbols on any line
+    // can be done nicer
+    {
+        "name": '9.1',
+        "line": 'any',
+        "sequence":[ 0, 1, 2 ],
+        "points": 5
+    },
+    {
+        "name": '9.2',
+        "line": 'any',
+        "sequence":[ 0, 2, 1 ],
+        "points": 5
+    },
+    {
+        "name": '9.3',
+        "line": 'any',
+        "sequence":[ 2, 1, 0 ],
+        "points": 5
+    },
+    {
+        "name": '9.4',
+        "line": 'any',
+        "sequence":[ 2, 0, 1 ],
+        "points": 5
+    },
+    {
+        "name": '9.5',
+        "line": 'any',
+        "sequence":[ 1, 0, 2 ],
+        "points": 5
+    },
+    {
+        "name": '9.6',
+        "line": 'any',
+        "sequence":[ 1, 2, 0 ],
+        "points": 5
+    },
 ];
