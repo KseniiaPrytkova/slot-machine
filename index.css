@@ -39,15 +39,16 @@ table {
     width: 100%;
     height: 100%;
     margin: 50px 0px 50px 0px;
-    box-shadow:20px 20px 50px red;
+    /* box-shadow:20px 20px 50px red; */
+    /* border: 2px solid black; */
     padding: 50px;
-  }
+}
 
 .roll 
 {
     height: 100%;
-    background:#fff;
-    border:solid grey 1px;
+    /* background:#fff; */
+    /* border:solid grey 1px; */
 }
 
 @keyframes flickerAnimation 

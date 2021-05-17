@@ -1,51 +1,48 @@
-// $(document).ready(function slotMachineImplementation() {
     const bar = 'src/BAR.png'; // 0
     const barDoubled = 'src/2xBAR.png'; // 1
     const barTripled = 'src/3xBAR.png'; // 2
     const cherry = 'src/Cherry.png'; // 3
     const seven = 'src/7.png'; // 4
 
+    // points
+    let result = 1;
+    // current winning row
+    let winRow = 0;
+
     const arr = [bar, barDoubled, barTripled, cherry, seven];
-    var resultArr = [
+    let resultArr = [
         [0, 0, 0],
         [0, 0, 0],
         [0, 0, 0],
     ];
-    // var resultArr;
-    //var result = 0;
+
+
+    // fn to check arrays equality
+    const equals = (a, b) =>
+        a.length === b.length &&
+        a.every((v, i) => v === b[i]);
 
     function isPayouts() {
-        resultArr = resultArr;
-        console.log('RESULT: ', resultArr);
-        console.log(resultArr.length);
-
-        var result = 0;
-
-        // resultArr.forEach(function(item, index, array) {
-        //     console.log(item, index)
-        // })
-
         for(let i = 0; i < resultArr.length; i++) {
-            console.log('ROW #: ', i);
-            var row = resultArr[i];
-            console.log(row);
-            for(let j = 0; j < row.length; j++) {
-                result += row[j];
-                console.log("row[" + i + "][" + j + "] = " + row[j]);
-            }
+            let row = resultArr[i];
+
+            data.forEach(function(dataItem) {
+                if (equals(row, dataItem.sequence)) {
+                    if (dataItem.line == 'any' || dataItem.line == i) {
+                        result += dataItem.points;
+                        winRow = i.toString();
+                        document.getElementById(winRow).style.background = "red";
+                    }
+                }
+            });
         }
         return(result);
     }
 
     function spinEachTableCell(currentSlot, interval, reel, reelIteration) {
-        var counter = 0;
-        // resultArr = [
-        //     [1, 0, 0],
-        //     [0, 0, 0],
-        //     [0, 0, 0],
-        // ];
+        let counter = 0;
 
-        var setIntervalId = setInterval(function runSlot(){
+        let setIntervalId = setInterval(function runSlot(){
             counter++;
             randImgIndex = Math.floor(Math.random() * arr.length);
             $(currentSlot).attr("src", arr[randImgIndex]);
@@ -61,14 +58,14 @@
         return setIntervalId;
     }
 
-    function startSlotMachine2() {
-        var r = $.Deferred();
+    function spinSlotMachine() {
+        let r = $.Deferred();
 
         $("img").addClass("blur");
         $("img").addClass("top");
 
-        var table = document.getElementById('slotsCollection');
-        var numberOfRows = table.rows.length;
+        let table = document.getElementById('slotsCollection');
+        let numberOfRows = table.rows.length;
 
         for(let i = 0; i < numberOfRows; i++) {
             let numberOfCells = table.rows[i].cells.length;
@@ -79,18 +76,21 @@
             }
         }
 
+        // if spinning must last 2 seconds, then this solution is not so bad
         setTimeout(function () {
             r.resolve();
         }, 2500);
         return r;
     }
 
-    function startSlotMachine3() {
-        var result = isPayouts();
+    function calculatePayout() {
+        let result = isPayouts();
         document.getElementById('points').innerHTML = result;
     }
 
+    // Initial function. Waits untill animation is finished to start calculate payouts.
     function startSlotMachine() {
-        startSlotMachine2().done(startSlotMachine3);
+        result -= 1;
+        document.getElementById(winRow).style.background = "white";
+        spinSlotMachine().done(calculatePayout);
     }
-// });
