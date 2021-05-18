@@ -6,6 +6,7 @@
 
     // points
     let result = 1;
+    var blinkInterval = 0;
     // current winning row/rows
     let winRow = ['-1', '-1', '-1'];
 
@@ -21,6 +22,13 @@
         a.length === b.length &&
         a.every((v, i) => v === b[i]);
 
+    // make points blink when win combintion occurs
+    function blinkWinPoints() {
+        let formInput = document.getElementById('points');
+        $(formInput).fadeOut(500);
+        $(formInput).fadeIn(500);
+    }
+
     function isPayouts() {
         const arr = document.getElementById("isDebug").checked ? debugArr : resultArr;
 
@@ -33,6 +41,7 @@
                         result += dataItem.points;
                         winRow[i] = i.toString();
                         document.getElementById(winRow[i]).style.background = 'red';
+                        blinkInterval = setInterval(blinkWinPoints, 1000);
                     }
                 }
             });
@@ -102,6 +111,7 @@
         if (!isWon(result) || !isEnoughMoney(result))
             return;
 
+        clearInterval(blinkInterval);
         result -= 1;
         for (let i = 0; i < winRow.length; i++) {
             if (winRow[i] !== '-1') {

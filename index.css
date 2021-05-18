@@ -19,6 +19,7 @@ input[type=text] {
     border-bottom: 2px solid red;
     text-align:center;
     font-size: 150%;
+    color: red;
     outline: none;
 }
 
@@ -57,6 +58,7 @@ table {
 }
 
 #debugTable {
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     border: 1px dashed black;
     width: 50%;
     margin: 20px auto;
