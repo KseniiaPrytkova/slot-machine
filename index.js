@@ -22,7 +22,7 @@
         a.every((v, i) => v === b[i]);
 
     function isPayouts() {
-        let arr = document.getElementById("isDebug").checked ? debugArr : resultArr;
+        const arr = document.getElementById("isDebug").checked ? debugArr : resultArr;
 
         for(let i = 0; i < arr.length; i++) {
             let row = arr[i];
@@ -32,7 +32,7 @@
                     if (dataItem.line == 'any' || dataItem.line == i) {
                         result += dataItem.points;
                         winRow[i] = i.toString();
-                        document.getElementById(winRow[i]).style.background = "red";
+                        document.getElementById(winRow[i]).style.background = 'red';
                     }
                 }
             });
@@ -46,19 +46,19 @@
         let setIntervalId = setInterval(function runSlot(){
             counter++;
             randImgIndex = Math.floor(Math.random() * arr.length);
-            $(currentSlot).attr("src", arr[randImgIndex]);
+            $(currentSlot).attr('src', arr[randImgIndex]);
     
             if(counter === interval) {
                 clearInterval(setIntervalId);
-                if (document.getElementById("isDebug").checked == true) {
+                if (document.getElementById('isDebug').checked == true) {
                     let debugIndex = debugArr[reel][reelIteration];
-                    $(currentSlot).attr("src", arr[debugIndex]);
+                    $(currentSlot).attr('src', arr[debugIndex]);
                 }
                 else {
                     resultArr[reel][reelIteration] = randImgIndex;
                 }
-                $(currentSlot).removeClass("blur");
-                $(currentSlot).removeClass("top");
+                $(currentSlot).removeClass('blur');
+                $(currentSlot).removeClass('top');
                 return ;
             }
         }, 5);
@@ -68,17 +68,17 @@
     function spinSlotMachine() {
         let r = $.Deferred();
 
-        $("img").addClass("blur");
-        $("img").addClass("top");
+        $('img').addClass('blur');
+        $('img').addClass('top');
 
-        let table = document.getElementById('slotsCollection');
-        let numberOfRows = table.rows.length;
+        const table = document.getElementById('slotsCollection');
+        const numberOfRows = table.rows.length;
 
         for(let i = 0; i < numberOfRows; i++) {
             let numberOfCells = table.rows[i].cells.length;
 
             for(let j = 0; j < numberOfCells; j++) {
-                let currentCell = table.rows[i].cells[j].getElementsByTagName("*");
+                let currentCell = table.rows[i].cells[j].getElementsByTagName('*');
                 spinEachTableCell($(currentCell), 140 * (j + 1), i, j);
             }
         }
@@ -91,13 +91,13 @@
     }
 
     function calculatePayout() {
-        let result = isPayouts();
-        document.getElementById("points").value = result;
+        const result = isPayouts();
+        document.getElementById('points').value = result;
     }
 
     // initial function. Waits untill animation is finished to start calculate payouts.
     function startSlotMachine() {
-        result = document.getElementById("points").value;
+        result = document.getElementById('points').value;
 
         if (!isEnoughMoney(result))
             return;
@@ -105,7 +105,7 @@
         result -= 1;
         for (let i = 0; i < winRow.length; i++) {
             if (winRow[i] !== '-1') {
-                document.getElementById(winRow[i]).style.background = "white";
+                document.getElementById(winRow[i]).style.background = 'white';
             }
         }
         spinSlotMachine().done(calculatePayout);
