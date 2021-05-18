@@ -112,12 +112,12 @@
         if (!isWon(result) || !isEnoughMoney(result))
             return;
 
-        clearInterval(blinkInterval);
         result -= 1;
         for (let i = 0; i < winRow.length; i++) {
             if (winRow[i] !== '-1') {
                 document.getElementById(winRow[i]).style.background = 'white';
             }
         }
+        clearInterval(blinkInterval);
         spinSlotMachine().done(calculatePayout);
     }

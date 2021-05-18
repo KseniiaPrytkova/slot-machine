@@ -10,7 +10,7 @@ function isEnoughMoney(amount) {
 }
 
 function isWon(amount) {
-    if (isNaN(amount) || amount > 5000) {
+    if (amount > 5000) {
         alert('You won. Enough!');
         return false;
     }
