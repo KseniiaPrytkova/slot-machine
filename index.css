@@ -10,13 +10,6 @@ body {
     border:none;
 }
 
-/* #points {
-    margin: auto;
-    width: 10%;
-    border: 1px solid black;
-    padding: 10px;
-} */
-
 input[type=text] {
     width: 100%;
     padding: 12px 20px;
@@ -29,7 +22,6 @@ input[type=text] {
     outline: none;
 }
 
-
 button {
     border: 2px solid black;
     background-color: white;
@@ -40,8 +32,6 @@ button {
     border-color: #f44336;
     color: red;
     outline: none;
-    /* margin-top: 20px; */
-    /* margin: auto; */
     position: relative;
 }
 
@@ -54,16 +44,7 @@ table {
     width: 100%;
     height: 100%;
     margin: 40px 0px 40px 0px;
-    /* box-shadow:20px 20px 50px red; */
-    /* border: 2px solid black; */
     padding: 50px;
-}
-
-.roll 
-{
-    /* height: 100%; */
-    /* background:#fff; */
-    /* border:solid grey 1px; */
 }
 
 .debugArea {
@@ -72,26 +53,18 @@ table {
     margin-top: 200px;
     padding: 10px;
     border-top: 2px dashed red;
+    /* text-align: center; */
 }
 
-/* .debugArea {
-    position: relative;
-    margin: 40px 0;
-    height: 40px;
-    width: 200px;
-    background: #eee;
+#debugTable {
+    border: 1px dashed black;
+    width: 50%;
+    /* margin: auto; */
 }
 
-.debugArea:after {
-    content: " ";
-    display: block;
-    background: #c00;
-    height: 29px;
-    width: 100%;
-
-    position: absolute;
-    bottom: -29px;
-}​ */
+#debugTable td {
+    padding: 15px;
+}
 
 @keyframes flickerAnimation 
 {
