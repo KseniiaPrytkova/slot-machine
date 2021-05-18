@@ -6,7 +6,7 @@
 
     // points
     let result = 1;
-    var blinkInterval = 0;
+    let blinkInterval = 0;
     // current winning row/rows
     let winRow = ['-1', '-1', '-1'];
 
@@ -29,6 +29,7 @@
         $(formInput).fadeIn(500);
     }
 
+    // fn that makes a decision if win combination took place
     function isPayouts() {
         const arr = document.getElementById("isDebug").checked ? debugArr : resultArr;
 

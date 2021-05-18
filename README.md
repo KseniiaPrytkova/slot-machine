@@ -5,6 +5,17 @@
 2. `>open index.html` or open `index.html` file in any other way;
 3. `>git pull` to check for updates.
 
+### How to:
+- Enter a valid number in input field (range is [1...5000]). That's is initial amount of points program will deal with.
+- Press **SPIN** button.
+- When the number of win points reaches 5000, the game will stop (to avoid infinity).
+- When you lose all points, the game, oddly enough, also stops.
+## debug mode:
+- Select the corresponding checkbox.
+- Choose the desired combinations of symbols for each reel.
+- Press **SAVE** button!
+- Press **SPIN** button. 
+
 ### TODO:
 - ~~add more winning combinations;~~ [**DONE** - can be optimised]
 - ~~change div on text fild;~~ [**DONE**]

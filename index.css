@@ -62,7 +62,6 @@ table {
     border: 1px dashed black;
     width: 50%;
     margin: 20px auto;
-
 }
 
 #debugTable td {
@@ -71,7 +70,6 @@ table {
 
 .buttonSave {
     text-align:center;
-
 }
 
 @keyframes flickerAnimation 
