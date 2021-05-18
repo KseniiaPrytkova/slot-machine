@@ -20,5 +20,7 @@
 - remove unnecessary classes/ids;
 - check variables names, change let on const if can be done;
 - fix time logic (spinning must last 2 seconds, after that reels start to sop one by one (starting from left) having 0.5 sec delay between landings);
+- think about how game ends (max value);
+- describe logic in readme;
 - fix double quotes/ single quotes;
 - test logic, find bugs.
