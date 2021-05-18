@@ -99,7 +99,7 @@
     function startSlotMachine() {
         result = document.getElementById('points').value;
 
-        if (!isEnoughMoney(result))
+        if (!isWon(result) || !isEnoughMoney(result))
             return;
 
         result -= 1;

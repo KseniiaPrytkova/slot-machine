@@ -3,7 +3,15 @@
 function isEnoughMoney(amount) {
     // if (!Number.isInteger(amount) || amount < 1 || amount > 5000) {
     if (isNaN(amount) || amount < 1 || amount > 5000) {
-        alert('You are not deserve to play with such a money.');
+        alert('You are not deserve to play with such a money. Valid nterval: [1...5000].');
+        return false;
+    }
+    return true;
+}
+
+function isWon(amount) {
+    if (isNaN(amount) || amount > 5000) {
+        alert('You won. Enouht!');
         return false;
     }
     return true;

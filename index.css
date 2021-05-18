@@ -53,13 +53,13 @@ table {
     margin-top: 200px;
     padding: 10px;
     border-top: 2px dashed red;
-    /* text-align: center; */
+    text-align: center;
 }
 
 #debugTable {
     border: 1px dashed black;
     width: 50%;
-    /* margin: auto; */
+    margin: 20px auto;
 
 }
 
@@ -68,7 +68,6 @@ table {
 }
 
 .buttonSave {
-    /* margin: auto; */
     text-align:center;
 
 }
