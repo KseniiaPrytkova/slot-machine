@@ -1,9 +1,9 @@
 # slot_machine
 ## Preview:
 ### slot machine itself:
-![terminal_game](src/how_to_slot_machine.gif)
+![how_to_slot_machine](src/how_to_slot_machine.gif)
 ### debug mode:
-![terminal_game](rsrc/how_to_debug_mode.gif)
+![how_to_debug_mode](src/how_to_debug_mode.gif)
 ## Run:
 1. `>git clone https://github.com/KseniiaPrytkova/slot_machine.git` or just download the project;
 2. `>open index.html` or open `index.html` file in any other way;
