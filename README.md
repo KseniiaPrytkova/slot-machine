@@ -14,7 +14,7 @@
 - make win event nicer then changing background by id;
 - style the game table itself;
 - ~~add debug area;~~ [**DONE**]
-- add corresponding logic for debug area;
+- ~~add corresponding logic for debug area;~~ [**DONE**]
 - ~~if more then 1 row won, then only 1 is highligted (bug for now);~~ [**DONE**]
 - improve combinatorics logic;
 - remove unnecessary classes/ids;

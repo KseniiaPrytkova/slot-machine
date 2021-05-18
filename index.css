@@ -1,5 +1,5 @@
 body {
-    padding-top: 50px;
+    padding: 50px 0px 50px 0px;
 }
 .slotMachine
 {
@@ -22,7 +22,7 @@ input[type=text] {
     outline: none;
 }
 
-button {
+.buttonSpin button {
     border: 2px solid black;
     background-color: white;
     color: black;
@@ -35,7 +35,7 @@ button {
     position: relative;
 }
 
-button:hover {
+.buttonSpin button:hover {
     background: #f44336;
     color: white;
 }
@@ -60,10 +60,17 @@ table {
     border: 1px dashed black;
     width: 50%;
     /* margin: auto; */
+
 }
 
 #debugTable td {
     padding: 15px;
+}
+
+.buttonSave {
+    /* margin: auto; */
+    text-align:center;
+
 }
 
 @keyframes flickerAnimation 

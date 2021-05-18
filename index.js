@@ -22,8 +22,10 @@
         a.every((v, i) => v === b[i]);
 
     function isPayouts() {
-        for(let i = 0; i < resultArr.length; i++) {
-            let row = resultArr[i];
+        let arr = document.getElementById("isDebug").checked ? debugArr : resultArr;
+
+        for(let i = 0; i < arr.length; i++) {
+            let row = arr[i];
 
             data.forEach(function(dataItem) {
                 if (equals(row, dataItem.sequence)) {
@@ -48,7 +50,13 @@
     
             if(counter === interval) {
                 clearInterval(setIntervalId);
-                resultArr[reel][reelIteration] = randImgIndex;
+                if (document.getElementById("isDebug").checked == true) {
+                    let debugIndex = debugArr[reel][reelIteration];
+                    $(currentSlot).attr("src", arr[debugIndex]);
+                }
+                else {
+                    resultArr[reel][reelIteration] = randImgIndex;
+                }
                 $(currentSlot).removeClass("blur");
                 $(currentSlot).removeClass("top");
                 return ;

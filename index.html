@@ -38,83 +38,52 @@
           </tr>
         </table>
 
-        <div class="button ">
+        <div class="buttonSpin">
           <button onclick="startSlotMachine()" id="twist">SPIN</button>
         </div>
     </div>
 
     <div class="debugArea">
         <label for="isDebug">Debug Mode:</label> 
-        <input type="checkbox" id="isDebug" onclick="startDebugMode()">
+        <input type="checkbox" id="isDebug">
 
         <!-- massive debug area table; should be done nicer; data dublicating 0_0  -->
+
+        <!-- in the case of this table, the second parameter 
+        (landing position of the symbol from set {top, center, bottom}) is meaningless -
+        everything is clear enough -->
         <table id="debugTable">
             <tr>
               <td>
                   <form>
                       <select id="symbols" name="symbols">
-                      <option value="au">BAR</option>
-                      <option value="ca">2xBAR</option>
-                      <option value="usa">3xBAR</option>
-                      <option value="usa">Cherry</option>
-                      <option value="usa">7</option>
+                          <option value="0">BAR</option>
+                          <option value="1">2xBAR</option>
+                          <option value="2">3xBAR</option>
+                          <option value="3">Cherry</option>
+                          <option value="4">7</option>
                       </select>
                   </form>
               </td>
               <td>
                   <form>
                       <select id="symbols" name="symbols">
-                      <option value="au">BAR</option>
-                      <option value="ca">2xBAR</option>
-                      <option value="usa">3xBAR</option>
-                      <option value="usa">Cherry</option>
-                      <option value="usa">7</option>
+                          <option value="0">BAR</option>
+                          <option value="1">2xBAR</option>
+                          <option value="2">3xBAR</option>
+                          <option value="3">Cherry</option>
+                          <option value="4">7</option>
                       </select>
                   </form>
               </td>
               <td>
                   <form>
                       <select id="symbols" name="symbols">
-                      <option value="au">BAR</option>
-                      <option value="ca">2xBAR</option>
-                      <option value="usa">3xBAR</option>
-                      <option value="usa">Cherry</option>
-                      <option value="usa">7</option>
-                      </select>
-                  </form>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                  <form>
-                      <select id="symbols" name="symbols">
-                      <option value="au">BAR</option>
-                      <option value="ca">2xBAR</option>
-                      <option value="usa">3xBAR</option>
-                      <option value="usa">Cherry</option>
-                      <option value="usa">7</option>
-                      </select>
-                  </form>
-              </td>
-              <td>
-                  <form>
-                      <select id="symbols" name="symbols">
-                      <option value="au">BAR</option>
-                      <option value="ca">2xBAR</option>
-                      <option value="usa">3xBAR</option>
-                      <option value="usa">Cherry</option>
-                      <option value="usa">7</option>
-                      </select>
-                  </form>
-              </td>
-              <td>
-                  <form>
-                      <select id="symbols" name="symbols">
-                      <option value="au">BAR</option>
-                      <option value="ca">2xBAR</option>
-                      <option value="usa">3xBAR</option>
-                      <option value="usa">Cherry</option>
-                      <option value="usa">7</option>
+                          <option value="0">BAR</option>
+                          <option value="1">2xBAR</option>
+                          <option value="2">3xBAR</option>
+                          <option value="3">Cherry</option>
+                          <option value="4">7</option>
                       </select>
                   </form>
               </td>
@@ -123,38 +92,77 @@
               <td>
                   <form>
                       <select id="symbols" name="symbols">
-                      <option value="au">BAR</option>
-                      <option value="ca">2xBAR</option>
-                      <option value="usa">3xBAR</option>
-                      <option value="usa">Cherry</option>
-                      <option value="usa">7</option>
+                          <option value="0">BAR</option>
+                          <option value="1">2xBAR</option>
+                          <option value="2">3xBAR</option>
+                          <option value="3">Cherry</option>
+                          <option value="4">7</option>
                       </select>
                   </form>
               </td>
               <td>
                   <form>
                       <select id="symbols" name="symbols">
-                      <option value="au">BAR</option>
-                      <option value="ca">2xBAR</option>
-                      <option value="usa">3xBAR</option>
-                      <option value="usa">Cherry</option>
-                      <option value="usa">7</option>
+                          <option value="0">BAR</option>
+                          <option value="1">2xBAR</option>
+                          <option value="2">3xBAR</option>
+                          <option value="3">Cherry</option>
+                          <option value="4">7</option>
                       </select>
                   </form>
               </td>
               <td>
                   <form>
                       <select id="symbols" name="symbols">
-                      <option value="au">BAR</option>
-                      <option value="ca">2xBAR</option>
-                      <option value="usa">3xBAR</option>
-                      <option value="usa">Cherry</option>
-                      <option value="usa">7</option>
+                          <option value="0">BAR</option>
+                          <option value="1">2xBAR</option>
+                          <option value="2">3xBAR</option>
+                          <option value="3">Cherry</option>
+                          <option value="4">7</option>
+                      </select>
+                  </form>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                  <form>
+                      <select id="symbols" name="symbols">
+                          <option value="0">BAR</option>
+                          <option value="1">2xBAR</option>
+                          <option value="2">3xBAR</option>
+                          <option value="3">Cherry</option>
+                          <option value="4">7</option>
+                      </select>
+                  </form>
+              </td>
+              <td>
+                  <form>
+                      <select id="symbols" name="symbols">
+                          <option value="0">BAR</option>
+                          <option value="1">2xBAR</option>
+                          <option value="2">3xBAR</option>
+                          <option value="3">Cherry</option>
+                          <option value="4">7</option>
+                      </select>
+                  </form>
+              </td>
+              <td>
+                  <form>
+                      <select id="symbols" name="symbols">
+                          <option value="0">BAR</option>
+                          <option value="1">2xBAR</option>
+                          <option value="2">3xBAR</option>
+                          <option value="3">Cherry</option>
+                          <option value="4">7</option>
                       </select>
                   </form>
               </td>
             </tr>
         </table>
+
+        <div class="buttonSave">
+          <button onclick="startDebugMode()" id="saveDebugSettings">SAVE</button>
+        </div>
     </div>
 
 </body>
