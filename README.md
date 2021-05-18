@@ -2,9 +2,9 @@
 
 TODO:
 - ~~add more winning combinations;~~ [**DONE** - can be optimised]
-- change div on text fild;
+- ~~change div on text fild;~~ [**DONE**]
 - ~~ask user for initial amount of money, display that in text field;~~ [**DONE**]
-- deal with out of money (just negative values for now); 
+- ~~deal with out of money (just negative values for now);~~ [**DONE**]
 - add blinking to the text field when win combination happens;
 - make win event nicer, then changing background by id;
 - style the table itself;
