@@ -5,12 +5,14 @@
 - Press **SPIN** button.
 - When the number of win points reaches 5000, the game will stop (to avoid infinity).
 - When you lose all points, the game, oddly enough, also stops.
+
 ![how_to_slot_machine](src/how_to_slot_machine.gif)
 ### debug mode:
 - Select the corresponding checkbox.
 - Choose the desired combination of symbols for each reel.
 - Press **SAVE** button!
-- Press **SPIN** button. 
+- Press **SPIN** button.
+
 ![how_to_debug_mode](src/how_to_debug_mode.gif)
 ## Run:
 1. `>git clone https://github.com/KseniiaPrytkova/slot_machine.git` or just download the project;
