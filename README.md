@@ -20,7 +20,7 @@
 
 ![how_to_debug_mode](src/how_to_debug_mode.gif)
 
-## Short description of logic:
+## Short description of the logic:
 1. When **SPIN** button was clicked `startSlotMachine()` function is called. Initial function, that calls
 `spinSlotMachine()` function (performs animation), waits untill animation is finished to start calculate payouts by calling `isPayouts()` function.
 2. `spinSlotMachine()`: looping throught the table with id `slotsCollection` which represents the slot machine. For each table cell (for each element of the slot machine) the function  `spinEachTableCell()` is called.
