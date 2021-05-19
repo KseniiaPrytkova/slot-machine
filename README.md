@@ -1,4 +1,9 @@
 # slot_machine
+## Run:
+1. `>git clone https://github.com/KseniiaPrytkova/slot_machine.git` or just download the project;
+2. `>open index.html` or open `index.html` file in any other way;
+3. `>git pull` to check for updates.
+
 ## Preview:
 ### slot machine itself:
 - Enter a valid number in input field (range is [1...5000]). That's is initial amount of points program will deal with.
@@ -14,10 +19,6 @@
 - Press **SPIN** button.
 
 ![how_to_debug_mode](src/how_to_debug_mode.gif)
-## Run:
-1. `>git clone https://github.com/KseniiaPrytkova/slot_machine.git` or just download the project;
-2. `>open index.html` or open `index.html` file in any other way;
-3. `>git pull` to check for updates.
 
 ## TODO:
 - ~~add more winning combinations;~~ [**DONE** - can be optimised]
